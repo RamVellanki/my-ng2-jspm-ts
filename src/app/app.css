@@ -1,0 +1,93 @@
+ .primary-toolbar {
+     margin-top: -64px;
+     margin-left: -8px;
+     margin-right: -8px;
+     width: 100%;
+     border-bottom: 1px solid lightgrey;
+     margin-bottom: 3px;
+     box-shadow: 1px 1px 1px lightgray;
+     position: fixed;
+     z-index: 4;
+ }
+ 
+ .primary-toolbar md-toolbar {
+     color: white ;
+     background: #00a9e0;
+ }
+ .secondary-toolbar {
+    margin-top: 64px; 
+    margin-left: -8px;
+    margin-right: -8px;
+    position: relative;
+    border-bottom: 1px solid lightgrey;
+ }
+ 
+  #main {
+   height:80%;
+   min-height: 800px;
+   display: -webkit-flex;
+   display:         flex;
+   -webkit-flex-flow: row;
+           flex-flow: row;
+   }
+  
+  #main > nav {
+   border-right: 1px solid lightgrey;
+   background: rgb(250, 250, 250);
+  -webkit-flex: 2 1 20%;
+           flex: 2 1 20%;
+   -webkit-order: 1;
+           order: 1;
+   }
+   
+  #main > router {
+   margin: 4px;
+   -webkit-flex: 1 1 80%;
+           flex: 1 1 80%;
+   -webkit-order: 2;
+           order: 2;
+   }
+   
+  tab {padding-left: 1em}
+  tab1 { padding-left: 4em; }
+  tab2 { padding-left: 8em; }
+  tab3 { padding-left: 12em; }
+  tab4 { padding-left: 16em; }
+  tittle { padding-left: 1em; } 
+   
+  space {-webkit-flex: 1 1 auto;
+            flex: 1 1 auto;  }       
+  
+  footer {
+     margin-top: -64px;
+   min-height: 5%;
+   background: rgb(250, 250, 250);
+   }
+ 
+  /* Too narrow to support three columns */
+  @media all and (max-width: 768px) {
+  
+   #main {
+    -webkit-flex-flow: column;
+            flex-flow: column;
+   }
+
+   #main > router, #main > nav {
+    /* Return them to document order */
+    -webkit-order: 0;
+            order: 0;
+   }
+  
+   #main > nav, #main > header,footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  tab1 { padding-left: 1em; }
+  tab2 { padding-left: 2em; }
+  tab3 { padding-left: 4em; }
+  tab4 { padding-left: 6em; }
+  dashboard {visibility: hidden;}
+  home {visibility: hidden;}
+  }
+
+ 
